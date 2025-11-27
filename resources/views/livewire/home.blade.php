@@ -1,0 +1,12 @@
+<div>
+    @livewire('hero')
+    @livewire('about')
+    @livewire('categories')
+    @livewire('new-arrivals')
+    @livewire('collection-organic')
+    @livewire('beauty-foundation')
+    @livewire('best-seller')
+    @livewire('features')
+    @livewire('newsletter')
+    @livewire('partners')
+</div>

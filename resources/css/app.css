@@ -1,0 +1,593 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import 'style.css';
+@import 'style-f.css';
+@import 'font-awesome.css';
+@import 'themify-icons.css';
+@import 'owl.carousel/dist/assets/owl.carousel.min.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hero Banner Sliding Styles */
+#Gslider {
+    background: #f5f0e8;
+    color: #333;
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#Gslider .owl-stage-outer {
+    overflow: hidden;
+    position: relative;
+}
+
+#Gslider .owl-stage {
+    display: flex;
+}
+
+#Gslider .owl-item {
+    min-height: 700px;
+}
+
+#Gslider .item {
+    position: relative;
+    min-height: 700px;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+#Gslider .hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#Gslider .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#Gslider .hero-content-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#Gslider .hero-content-overlay .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 15px;
+}
+
+#Gslider .hero-content-left {
+    padding: 0;
+    z-index: 2;
+    position: relative;
+}
+
+#Gslider .hero-subtitle {
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#Gslider .hero-title {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 20px 0;
+    color: #fff;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#Gslider .hero-description {
+    font-size: 16px;
+    color: #fff;
+    margin: 25px 0 35px 0;
+    line-height: 1.8;
+    font-weight: 300;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#Gslider .btn-primary {
+    background: #ff8c42;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#Gslider .btn-primary:hover {
+    background: #ff7a2e;
+    color: #fff;
+}
+
+
+#Gslider .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#Gslider .owl-nav button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 1;
+}
+
+#Gslider .owl-nav button:hover {
+    opacity: 0.7;
+}
+
+#Gslider .owl-nav button span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+
+#Gslider .owl-nav .owl-prev {
+    left: 20px;
+}
+
+#Gslider .owl-nav .owl-next {
+    right: 20px;
+}
+
+#Gslider .owl-nav [class*='owl-'] {
+    color: #fff;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+#Gslider .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+#Gslider .owl-nav [class*='owl-'] i {
+    font-size: 28px;
+    line-height: 50px;
+}
+
+#Gslider .owl-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#Gslider .owl-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#Gslider .owl-dots button.active {
+    background: #F7941D;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    #Gslider {
+        min-height: 500px;
+    }
+    
+    #Gslider .item {
+        min-height: 500px;
+    }
+    
+    #Gslider .hero-content-overlay {
+        min-height: 500px;
+    }
+    
+    #Gslider .hero-content-overlay .container {
+        padding: 60px 15px;
+    }
+    
+    #Gslider .hero-title {
+        font-size: 36px;
+    }
+    
+    #Gslider .hero-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    #Gslider {
+        min-height: 400px;
+    }
+    
+    #Gslider .item {
+        min-height: 400px;
+    }
+    
+    #Gslider .hero-content-overlay {
+        min-height: 400px;
+    }
+    
+    #Gslider .hero-content-overlay .container {
+        padding: 40px 15px;
+    }
+    
+    #Gslider .hero-title {
+        font-size: 28px;
+    }
+    
+    #Gslider .hero-description {
+        font-size: 14px;
+        margin: 20px 0 25px 0;
+    }
+    
+    #Gslider .btn-primary {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+    
+    #Gslider .owl-nav .owl-prev {
+        left: 10px;
+    }
+    
+    #Gslider .owl-nav .owl-next {
+        right: 10px;
+    }
+    
+    #Gslider .owl-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+/* Large beige circular background */
+.about-image::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #f5e6d3;
+    border-radius: 50%;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Product bag */
+.product-bag {
+    position: relative;
+    z-index: 2;
+    width: 280px;
+    height: 320px;
+    background: #f0e0c8;
+    border-radius: 20px 20px 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-right: -80px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c2c2c;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 40px;
+}
+
+/* Bag drawstring top */
+.product-bag::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 30px;
+    background: #e8d4b8;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Bag drawstring holes */
+.product-bag::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 20px;
+    background: linear-gradient(to right, 
+        transparent 20px,
+        #d4c0a4 20px,
+        #d4c0a4 25px,
+        transparent 25px,
+        transparent 155px,
+        #d4c0a4 155px,
+        #d4c0a4 160px,
+        transparent 160px
+    );
+}
+
+/* Bag tag hanging from drawstring */
+.bag-tag {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-8deg);
+    background: #8b6f47;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    z-index: 3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+/* Serum bottles container */
+.serum-bottles {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: -60px;
+}
+
+/* Individual bottles */
+.bottle {
+    width: 50px;
+    height: 90px;
+    background: linear-gradient(to bottom, #5d4037 0%, #3e2723 100%);
+    border-radius: 8px 8px 4px 4px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Bottle cap */
+.bottle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 12px;
+    background: #2c2c2c;
+    border-radius: 4px 4px 2px 2px;
+}
+
+/* Bottle label */
+.bottle::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Second bottle - slightly different size */
+.serum-bottles .bottle:nth-child(2) {
+    width: 45px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+/* Third bottle - spray bottle */
+.serum-bottles .bottle:nth-child(3) {
+    width: 40px;
+    height: 100px;
+    margin-left: 5px;
+}
+
+.serum-bottles .bottle:nth-child(3)::before {
+    width: 30px;
+    height: 15px;
+    background: #1a1a1a;
+    border-radius: 6px 6px 2px 2px;
+}
+
+/* About text section */
+.about-text {
+    padding-left: 40px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #2c2c2c;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.about-text h2 i {
+    color: #8b6f47;
+    margin-right: 12px;
+    font-size: 36px;
+    vertical-align: middle;
+}
+
+/* Decorative element after heading */
+.about-text h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.about-text p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.signature {
+    font-family: 'Brush Script MT', 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #2c2c2c;
+    margin-top: 30px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .about-image {
+        min-height: 400px;
+    }
+    
+    .about-image::before {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .product-bag {
+        width: 220px;
+        height: 260px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-text h2 {
+        font-size: 32px;
+    }
+    
+    .about-image::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .product-bag {
+        width: 180px;
+        height: 220px;
+        font-size: 16px;
+        margin-right: -50px;
+    }
+    
+    .serum-bottles {
+        margin-left: -40px;
+    }
+    
+    .bottle {
+        width: 40px;
+        height: 70px;
+    }
+}
+
