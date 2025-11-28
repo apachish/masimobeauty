@@ -10,7 +10,8 @@
                     <button class="btn-primary">VIEW COLLECTION</button>
                 </div>
                 <div class="foundation-image">
-                    <div class="foundation-jar"></div>
+                    <img src="/images/img3-3.jpg" />
+
                 </div>
             </div>
         </div>

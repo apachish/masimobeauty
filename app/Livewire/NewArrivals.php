@@ -2,24 +2,18 @@
 
 namespace App\Livewire;
 
+use App\Models\Product;
 use Livewire\Component;
 
 class NewArrivals extends Component
 {
     public $currentSlide = 0;
 
-    public function nextSlide()
-    {
-        $this->currentSlide = ($this->currentSlide + 1) % 3;
-    }
-
-    public function previousSlide()
-    {
-        $this->currentSlide = ($this->currentSlide - 1 + 3) % 3;
-    }
 
     public function render()
     {
-        return view('livewire.new-arrivals');
+        $arrivals = Product::where('status','active')->where('condition','new')->orderBy('price','DESC')->get();
+
+        return view('livewire.new-arrivals',compact('arrivals'));
     }
 }

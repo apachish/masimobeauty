@@ -1,7 +1,7 @@
 <div>
     <!-- Header -->
     <header class="header">
-        <div class="container">
+        <div class="container container-full " >
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" wire:click="toggleMobileMenu" x-data @click="showMobileMenu = !showMobileMenu">
                 <i class="fas fa-bars"></i>

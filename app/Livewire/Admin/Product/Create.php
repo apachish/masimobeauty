@@ -24,7 +24,7 @@ class Create extends Component
         "status"=>"inactive",
         "condition"=>null,
         "price"=>null,
-        "discount"=>null,
+        "discount"=>0,
     ];
     /**
      * Store a newly created resource in storage.

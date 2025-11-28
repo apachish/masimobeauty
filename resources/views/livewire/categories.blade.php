@@ -3,24 +3,15 @@
     <section class="categories">
         <div class="container">
             <div class="category-grid">
-                <div class="category-card category-green">
+                @foreach($categories as $category)
+                <div class="category-card">
                     <div class="category-image">
-                        <div class="bottle-pair"></div>
+                        <img src="{{data_get($category,'photo')}}" alt="{{data_get($category,'title')}}">
+                        <h3 class="category-title">{{data_get($category,'title')}}</h3>
+                        <a href="/product-cat/{{data_get($category,'slug')}}" class="category-btn">VIEW CATEGORY</a>
                     </div>
-                    <h3>Body Oil</h3>
                 </div>
-                <div class="category-card category-pink">
-                    <div class="category-image">
-                        <div class="powder-pile"></div>
-                    </div>
-                    <h3>Makeup Powder</h3>
-                </div>
-                <div class="category-card category-blue">
-                    <div class="category-image">
-                        <div class="soap-bar"></div>
-                    </div>
-                    <h3>Soap Beauty</h3>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

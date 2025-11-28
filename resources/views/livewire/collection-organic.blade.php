@@ -4,12 +4,7 @@
         <div class="container">
             <div class="collection-content">
                 <div class="collection-image">
-                    <div class="organic-jar">
-                        <div class="jar-label">LOVE ME GREEN</div>
-                        <div class="jar-subtitle">Certified Organic</div>
-                        <div class="tea-leaves"></div>
-                        <div class="coffee-beans"></div>
-                    </div>
+                    <img src="/images/img3-2.jpg" />
                 </div>
                 <div class="collection-text">
                     <span class="section-subtitle">DISCOVER THE MAGIC!</span>

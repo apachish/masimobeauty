@@ -22,7 +22,6 @@ class Index extends Component
      */
     public function destroy()
     {
-        dd("kose ame maryam");
         $product = Product::findOrFail();
         $status = $product->delete();
 
