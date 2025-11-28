@@ -2,8 +2,8 @@
     <!-- New Arrivals -->
     <section class="new-arrivals">
         <div class="container">
-            <div class="new-arrivals-content" 
-                 x-data="{ 
+            <div class="new-arrivals-content"
+                 x-data="{
                      currentSlide: {{ $currentSlide }},
                      totalSlides: {{ ceil(count($arrivals) / 3) }},
                      nextSlide() {
@@ -25,8 +25,10 @@
                  }">
                 <div class="new-arrivals-text">
                     <h2>New Arrivals</h2>
-                    <div class="leaf-icon">
-                        <i class="fas fa-leaf"></i>
+                    <div class="title-decoration">
+                        <span class="decoration-line"></span>
+                        <img  src="/images/icon-title.png" alt="Decoration" class="decoration-icon"/>
+                        <span class="decoration-line"></span>
                     </div>
                     <p>100% authentic products, quick delivery, fast online support, and free gifts almost with every order. We also offer worldwide shipping of Korean cosmetics at affordable rates that depend on the weight.</p>
                     <div class="carousel-controls">
@@ -39,8 +41,8 @@
                     </div>
                 </div>
                 <div class="products-carousel-wrapper">
-                    <div class="products-carousel" 
-                         x-bind:style="'transform: translateX(calc(-' + currentSlide + ' * (100% / 3 + 20px / 3)))'">
+                    <div class="products-carousel"
+                         x-bind:style="'transform: translateX(calc(-' + currentSlide + ' * (33.333% + 20px / 3)))'">
                         @foreach($arrivals as $arrival)
                         <div class="product-card" wire:key="product-{{ data_get($arrival,'id') }}">
                             @if(data_get($arrival,'discount'))

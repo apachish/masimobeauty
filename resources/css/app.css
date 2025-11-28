@@ -523,20 +523,30 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin-top: 0;
     margin-bottom: 25px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-arrivals-text .title-decoration {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .decoration-line {
-    flex: 1;
-    max-width: 100px;
+    width: 60px;
     height: 1px;
     background: #e3e3e3;
+    flex-shrink: 0;
 }
 
 .decoration-icon {
-    width: 47px;
-    height: auto;
+    width: 30px;
+    height: 47px;
     flex-shrink: 0;
+    object-fit: contain;
 }
 /*.about-text h2::after {*/
 /*    content: '';*/
@@ -747,10 +757,16 @@
     background: #fff;
 }
 
+.new-arrivals .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .new-arrivals-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    grid-template-columns: 0.8fr 2.2fr;
+    gap: 10px;
     align-items: flex-start;
 }
 
@@ -761,10 +777,11 @@
     color: #000;
     font-family: 'Playfair Display', 'Georgia', serif;
     letter-spacing: -1px;
+    text-align: center;
 }
 
 .leaf-icon {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -776,14 +793,14 @@
 .new-arrivals-text p {
     color: #666;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 14px;
 }
 
 .carousel-controls {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .nav-arrow {
@@ -828,7 +845,7 @@
     flex-shrink: 0;
     background: #fff;
     border-radius: 10px;
-    padding: 20px;
+    /*padding: 20px;*/
     text-align: center;
     position: relative;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
