@@ -746,57 +746,7 @@ body {
     margin-top: 20px;
 }
 
-/* Categories */
 
-
-.bottle-pair {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #fff 0%, #e8f5e9 100%);
-    border-radius: 10px;
-    position: relative;
-}
-
-.bottle-pair::before,
-.bottle-pair::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 120px;
-    background: #fff;
-    border-radius: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.bottle-pair::before {
-    left: 30%;
-}
-
-.bottle-pair::after {
-    right: 30%;
-}
-
-.powder-pile {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f8bbd0 0%, #fce4ec 100%);
-    border-radius: 10px;
-    position: relative;
-}
-
-.soap-bar {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #fff9c4 0%, #fff 100%);
-    border-radius: 10px;
-}
-
-.category-card h3 {
-    font-size: 24px;
-    color: #333;
-    font-weight: 600;
-}
 
 /* New Arrivals & Best Seller */
 .new-arrivals {
