@@ -42,7 +42,7 @@
                 </div>
                 <div class="products-carousel-wrapper">
                     <div class="products-carousel"
-                         x-bind:style="'transform: translateX(calc(-' + currentSlide + ' * (33.333% + 20px / 3)))'">
+                         x-bind:style="'transform: translateX(calc(-' + currentSlide + ' * ((100% - 40px) / 3 + 20px)))'">
                         @foreach($arrivals as $arrival)
                             <livewire:product-card :product="$arrival" :key="'product-'.data_get($arrival,'id')" />
                         @endforeach
