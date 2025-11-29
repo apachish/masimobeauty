@@ -4,7 +4,7 @@
         <div class="container">
             <div class="collection-content">
                 <div class="collection-image">
-                    <img src="/images/img3-2.jpg" />
+                    <img src="/images/img3-2.jpg" style="max-width: 100%" />
                 </div>
                 <div class="collection-text">
                     <span class="section-subtitle">DISCOVER THE MAGIC!</span>

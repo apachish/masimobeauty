@@ -44,31 +44,7 @@
                     <div class="products-carousel"
                          x-bind:style="'transform: translateX(calc(-' + currentSlide + ' * (33.333% + 20px / 3)))'">
                         @foreach($arrivals as $arrival)
-                        <div class="product-card" wire:key="product-{{ data_get($arrival,'id') }}">
-                            @if(data_get($arrival,'discount'))
-                            <div class="discount-badge">-{{data_get($arrival,'discount')}}%</div>
-                            @endif
-                            <div class="product-img product-img-1">
-                                <img src="{{data_get($arrival,'photo')}}" alt="{{data_get($arrival,'title')}}">
-                            </div>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span class="review-count">1</span>
-                            </div>
-                            <h4>{{data_get($arrival,'title')}}</h4>
-                            <div class="price">
-                                @if(data_get($arrival,'discount'))
-                                    <span class="old-price">${{number_format(data_get($arrival,'price'), 2)}}</span>
-                                    <span class="current-price">${{number_format(data_get($arrival,'price')*((100-data_get($arrival,'discount'))/100), 2)}}</span>
-                                @else
-                                    ${{number_format(data_get($arrival,'price'), 2)}}
-                                @endif
-                            </div>
-                        </div>
+                            <livewire:product-card :product="$arrival" :key="'product-'.data_get($arrival,'id')" />
                         @endforeach
                     </div>
                 </div>
