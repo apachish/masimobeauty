@@ -24,7 +24,7 @@
                      }
                  }">
                 <div class="new-arrivals-text">
-                    <h2>New Arrivals</h2>
+                    <h2>{{$title}}</h2>
                     <div class="title-decoration">
                         <span class="decoration-line"></span>
                         <img  src="/images/icon-title.png" alt="Decoration" class="decoration-icon"/>

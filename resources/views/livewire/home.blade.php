@@ -2,10 +2,11 @@
     @livewire('hero')
     @livewire('about')
     @livewire('categories')
-    @livewire('new-arrivals')
+    @livewire('slide-products', ['title' => 'New Arrivals'])
     @livewire('collection-organic')
     @livewire('beauty-foundation')
-    @livewire('best-seller')
+    @livewire('slide-products', ['title' => 'Best Seller'])
+
     @livewire('features')
     @livewire('newsletter')
     @livewire('partners')
